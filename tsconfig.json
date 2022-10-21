@@ -9,6 +9,7 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "pretty": true,
+        "strictNullChecks": true,
         "lib": [
             "dom",
             "esnext"
