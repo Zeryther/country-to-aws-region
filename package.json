@@ -1,0 +1,68 @@
+{
+  "name": "country-to-aws-region",
+  "officialName": "country-to-aws-region",
+  "version": "1.0.0",
+  "description": "JS library that helps get the closest AWS region from a country code",
+  "summary": "JS library that helps get the closest AWS region from a country code",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "unpkg": "dist/country-to-aws-region.min.js",
+  "browser": "dist/country-to-aws-region.min.js",
+  "scripts": {
+    "update-data": "node update-data.mjs",
+    "build:umd": "rimraf ./dist && rollup -c && npm run size",
+    "build:cjs": "rimraf ./lib && tsc --module commonjs --outDir lib",
+    "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
+    "size": "limit-size"
+  },
+  "files": [
+    "dist",
+    "esm",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zeryther/country-to-aws-region.git"
+  },
+  "author": {
+    "name": "Mehdi Baaboura",
+    "email": "mbaaboura@gigadrivegroup.com",
+    "url": "https://github.com/Zeryther"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zeryther/country-to-aws-region/issues"
+  },
+  "homepage": "https://github.com/Zeryther/country-to-aws-region#readme",
+  "keywords": [
+    "aws",
+    "region",
+    "country",
+    "code",
+    "iso",
+    "iso2",
+    "cdn",
+    "geoip"
+  ],
+  "limit-size": [
+      {
+          "path": "dist/country-to-aws-region.min.js",
+          "limit": "8 Kb",
+          "gzip": true
+      }
+  ],
+  "devDependencies": {
+    "@lopatnov/rollup-plugin-uglify": "^2.1.5",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^9.0.1",
+    "@types/jest": "^29.2.0",
+    "jest": "^29.2.1",
+    "limit-size": "^0.1.4",
+    "node-fetch": "^3.2.10",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.2.3",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  }
+}
