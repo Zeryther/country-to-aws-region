@@ -16,7 +16,8 @@
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
     "size": "limit-size",
     "test": "jest",
-    "lint": "eslint src update-data.mjs --ext .js,.ts --fix"
+    "lint": "eslint src update-data.mjs --ext .js,.ts",
+    "lint-fix": "eslint src update-data.mjs --ext .js,.ts --fix"
   },
   "files": [
     "dist",
