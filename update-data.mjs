@@ -57,5 +57,5 @@ const __dirname = path.resolve();
   const dataFilePath = path.join(__dirname, 'src', 'data.ts')
   fs.writeFileSync(dataFilePath, '// AUTO-GENERATED DATA\n// This file should only be updated with the `npm run update-data` command.\n\nexport const countryRegionData: Record<string, string[]> = ' + JSON.stringify(countryRegionData, null, 4))
 
-  console.log('Done! Data written to src/data.json')
+  console.log('Done! Data written to src/data.ts')
 })()
