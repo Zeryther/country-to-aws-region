@@ -12,7 +12,7 @@ module.exports = [
     },
     plugins: [
       resolve(),
-      typescript({ sourceMap: true }),
+      typescript({ sourceMap: true, exclude: ["**/__tests__", "**/*.test.ts"] }),
       uglify()
     ]
   }

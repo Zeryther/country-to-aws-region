@@ -15,12 +15,13 @@
             "esnext"
         ],
         "skipLibCheck": true,
-        "outDir": "dist"
+        "outDir": "dist",
     },
     "include": [
         "src/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "**/*.test.ts"
     ]
 }
