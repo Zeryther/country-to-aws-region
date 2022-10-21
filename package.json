@@ -1,7 +1,7 @@
 {
   "name": "country-to-aws-region",
   "officialName": "country-to-aws-region",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS library that helps get the closest AWS region from a country code",
   "summary": "JS library that helps get the closest AWS region from a country code",
   "main": "lib/index.js",
