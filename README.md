@@ -33,7 +33,7 @@ import { countryToAwsRegion } from 'country-to-aws-region';
 const countryCode = 'DE'; // Get the country code from your request headers for example
 const regions = ['us-east-2', 'af-south-1'];
 
-console.log(countryToAwsRegion(countryCode)); // us-east-2
+console.log(countryToAwsRegion(countryCode, regions)); // us-east-2
 ```
 
 ## Contributing
